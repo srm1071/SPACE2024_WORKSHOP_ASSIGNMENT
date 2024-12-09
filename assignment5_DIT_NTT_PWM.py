@@ -95,9 +95,8 @@ def radix2(a,k1,k2,prime):
                 ind2=j+k+(m//2)
                 u=a[ind1]
                 v=a[ind2]
-                t=montgomery(v,omega,prime)
-                a[ind1]=(u+t)%prime
-                a[ind2]=(u-t+prime)%prime
+                #write your code here
+                
                 count=count+1
             r=r+1
     return a
