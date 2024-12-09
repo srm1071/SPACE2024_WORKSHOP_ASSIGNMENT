@@ -45,7 +45,7 @@ sum1=0
 for i in range(n):
     sum1=0
     for j in range(n):
-      #Please enter your code her
+      #Please enter your code here
       
     ntt_poly1[i]=sum1
 
