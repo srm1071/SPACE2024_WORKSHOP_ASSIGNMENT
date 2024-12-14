@@ -23,6 +23,9 @@ input [11:0] inp1,inp2;
 output [12:0] out;
 wire [12:0] w1,w3;
 
-//write your code here
+assign w1=inp1+inp2;
+assign w3=inp1+inp2-12'd3329;
+
+assign out=(w3[12])?w1[11:0]:w3[11:0];
 
 endmodule
