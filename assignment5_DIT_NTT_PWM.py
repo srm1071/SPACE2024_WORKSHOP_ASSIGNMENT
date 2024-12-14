@@ -64,8 +64,14 @@ def bitreverse3(a):
     return a1
 
 def div2_inv(t1d,u1d,gamma1,prime):
-    #write this function
-    
+    t1=int((t1d+u1d)%prime)
+    u1=int((t1d-u1d+prime)%prime)
+    if(t1%2!=0):
+        a1=(t1+prime)>>1;
+    else:
+        a1=t1>>1;
+
+    b1=montgomery(u1,gamma1, prime)
     return a1,b1
 
 def radix2(a,k1,k2,prime):
@@ -95,8 +101,9 @@ def radix2(a,k1,k2,prime):
                 ind2=j+k+(m//2)
                 u=a[ind1]
                 v=a[ind2]
-                #write your code here
-                
+                t=montgomery(v,omega,prime)
+                a[ind1]=(u+t)%prime
+                a[ind2]=(u-t+prime)%prime
                 count=count+1
             r=r+1
     return a
@@ -139,7 +146,12 @@ def radix2_inverse(a,prime):
     return a
 
 def base_multiplier(a0, a1, b0, b1, zeta):
-    #write the base multiplication
+    r = [ 0 for x in range(0,2)]
+    r[0] = montgomery(a1, b1,3329)
+    r[0] = montgomery(r[0], zeta,3329)
+    r[0] = (r[0] + montgomery(a0,b0,3329))%3329
+    r[1] = montgomery(a0, b1,3329)
+    r[1] = (r[1] + montgomery(a1, b0,3329))%3329
     return r
 
 def pointwise(poly_a, poly_b):
