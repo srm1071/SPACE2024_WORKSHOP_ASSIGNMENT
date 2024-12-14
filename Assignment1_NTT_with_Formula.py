@@ -46,7 +46,9 @@ for i in range(n):
     sum1=0
     for j in range(n):
       #Please enter your code here
-      
+	temp=pow(omega,i*j,prime)
+        temp1=pow(gamma,j,prime)
+        sum1=(sum1+poly1[j]*temp*temp1)%prime
     ntt_poly1[i]=sum1
 
 print("ntt is: ",(ntt_poly1))
