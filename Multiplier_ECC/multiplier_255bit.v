@@ -80,11 +80,7 @@ xbip_dsp48_macro_0 dsp4 (.CLK(clk),.SEL(sel),.A({1'd0,in2[95:72]}),.B({1'd0,mul_
 xbip_dsp48_macro_0 dsp5 (.CLK(clk),.SEL(sel),.A({1'd0,in2[119:96]}),.B({1'd0,mul_in1[16:0]}),.P(m4));
 xbip_dsp48_macro_0 dsp6 (.CLK(clk),.SEL(sel),.A({1'd0,in2[143:120]}),.B({1'd0,mul_in1[16:0]}),.P(m5));
 xbip_dsp48_macro_0 dsp7 (.CLK(clk),.SEL(sel),.A({1'd0,in2[167:144]}),.B({1'd0,mul_in1[16:0]}),.P(m6));
-xbip_dsp48_macro_0 dsp8 (.CLK(clk),.SEL(sel),.A({1'd0,in2[191:168]}),.B({1'd0,mul_in1[16:0]}),.P(m7));
-xbip_dsp48_macro_0 dsp9 (.CLK(clk),.SEL(sel),.A({1'd0,in2[215:192]}),.B({1'd0,mul_in1[16:0]}),.P(m8));
-xbip_dsp48_macro_0 dsp10 (.CLK(clk),.SEL(sel),.A({1'd0,in2[239:216]}),.B({1'd0,mul_in1[16:0]}),.P(m9));
-xbip_dsp48_macro_0 dsp11 (.CLK(clk),.SEL(sel),.A({10'd0,in2[254:240]}),.B({1'd0,mul_in1[16:0]}),.P(m10));
-
+//please complete the code here
 
 register_file reg1(m0[16:0], clk,rst,reg_sel,r0);
 register_file reg2(m1[16:0], clk,rst,reg_sel,r1);
